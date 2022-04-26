@@ -85,8 +85,8 @@ async function run() {
                 const result = await cursor.toArray();
                 res.send(result);
             }
-            else{
-                return res.status(403).send({message: "forbidden"})
+            else {
+                return res.status(403).send({ message: "forbidden" })
             }
         })
 
@@ -105,8 +105,11 @@ async function run() {
 run().catch(console.dir);
 
 
-app.get('/', (req, res) => {
+app.get('/hero', (req, res) => {
     res.send("Running genius sevices");
+})
+app.get('/', (req, res) => {
+    res.send("Hero is running and meets hero ku");
 })
 
 app.listen(port, () => {
