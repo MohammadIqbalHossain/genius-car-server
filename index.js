@@ -105,10 +105,10 @@ async function run() {
 run().catch(console.dir);
 
 
-app.get('/hero', (req, res) => {
+app.get('/', (req, res) => {
     res.send("Running genius sevices");
 })
-app.get('/', (req, res) => {
+app.get('/hero', (req, res) => {
     res.send("Hero is running and meets hero ku");
 })
 
